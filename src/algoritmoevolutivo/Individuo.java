@@ -1,8 +1,6 @@
-package algoritmoevolutivo;
-
 /**
  *
- * @author Alba de Pedro López
+ * @author Alba de Pedro
  */
 public class Individuo {
     int[] genes;
@@ -33,5 +31,14 @@ public class Individuo {
     
     public int getCasillaFinal(){
         return casillaFinal;
+    }
+    
+    @Override
+    public String toString(){
+    	StringBuilder individuo = new StringBuilder();
+    	for(int i = 0; i < genes.length; i++){
+    		individuo.append(genes[i]);
+    	}
+    	return individuo.toString();
     }
 }
