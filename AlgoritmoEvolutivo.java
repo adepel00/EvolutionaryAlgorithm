@@ -26,8 +26,8 @@ public class AlgoritmoEvolutivo {
         PROB_CROSSOVER = 0.8;
         PROB_MUTACION = 0.001;
         CASILLAS_RULETA = 100;
-        n = 5;
-        r = 5;
+        n = 20;
+        r = 10;
         
         individuos = new Individuo[n];
         for(int i = 0; i < n; i++){
@@ -149,7 +149,7 @@ public class AlgoritmoEvolutivo {
     }
     
     private Individuo[] cruzar(Individuo[] individuosCruzan){
-    	int corte = randomInt(individuosCruzan.length - 1, 0);
+    	int corte = randomInt(individuosCruzan[1].getGenes().length - 1, 0);
     	for(int i = 0; i < individuosCruzan.length; i++){
     		for(int j = 0; j <= corte; j++){
     			//Intercambio de genes
